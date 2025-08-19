@@ -98,19 +98,24 @@ namespace TrabalhoGabrielOliveira
             string nome = TextNome.Text;
             string autor = TextAutor.Text;
             string sinopse = TextSinopse.Text;
-            string preço = TextPreço.Text;
-            string gênero = TextGênero.Text;
+            string preco = TextPreço.Text;
+            string genero = TextGênero.Text;
             string paginas = TextPaginas.Text;
             string acabamento = TextAcabamento.Text;
 
-            string conexao = Server = sqlexpress; Database = CJ3027422PR2; User Id = aluno; Password = aluno;
-            string sql = INSERT INTO Livros (Nome, Autor, Sinopse, Preço, Gênero, Acabamento) VALUES (@Nome, @Autor, @Sinopse, @Preço, @Gênero, @Acabamento);
+            string conexao = "Server=sqlexpress;Database=CJ3027422PR2;User Id=aluno;Password=aluno";
+            string sql = "INSERT INTO Livros2 (Nome, Autor, Sinopse, Preco, Genero, Paginas, Acabamento) VALUES (@Nome ,@Autor ,@Sinopse ,@Preco ,@Genero, @Paginas, @Acabamento)";
             using (SqlConnection conn = new SqlConnection(conexao))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
-                    cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@Nome", nome);
+                    cmd.Parameters.AddWithValue("@Autor", autor);
+                    cmd.Parameters.AddWithValue("@Sinopse", sinopse);
+                    cmd.Parameters.AddWithValue("@Preco", preco);
+                    cmd.Parameters.AddWithValue("@Genero", genero);
+                    cmd.Parameters.AddWithValue("@Paginas", paginas);
+                    cmd.Parameters.AddWithValue("@Acabamento", acabamento);
 
                     try
                     {

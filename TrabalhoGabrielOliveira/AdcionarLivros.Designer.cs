@@ -65,6 +65,7 @@
             // TextSinopse
             // 
             this.TextSinopse.Location = new System.Drawing.Point(353, 136);
+            this.TextSinopse.Multiline = true;
             this.TextSinopse.Name = "TextSinopse";
             this.TextSinopse.Size = new System.Drawing.Size(144, 20);
             this.TextSinopse.TabIndex = 2;
