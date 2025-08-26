@@ -99,6 +99,9 @@
     <EmbeddedResource Include="AdcionarLivros.resx">
       <DependentUpon>AdcionarLivros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarAutor.resx">
+      <DependentUpon>CadastrarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configurar.resx">
       <DependentUpon>Configurar.cs</DependentUpon>
     </EmbeddedResource>

@@ -76,7 +76,7 @@ namespace TrabalhoGabrielOliveira
 
         private void TextGêneroClick(object sender, EventArgs e)
         {
-            TextGênero.Clear();
+           
         }
         private void TextPáginasClick(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace TrabalhoGabrielOliveira
 
         private void TextPreço_Click(object sender, EventArgs e)
         {
-            TextPreço.Clear();
+            TextPreco.Clear();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -98,8 +98,8 @@ namespace TrabalhoGabrielOliveira
             string nome = TextNome.Text;
             string autor = TextAutor.Text;
             string sinopse = TextSinopse.Text;
-            string preco = TextPreço.Text;
-            string genero = TextGênero.Text;
+            string preco = TextPreco.Text;
+            string genero = ComboGênero.Text;
             string paginas = TextPaginas.Text;
             string acabamento = TextAcabamento.Text;
 
@@ -129,6 +129,11 @@ namespace TrabalhoGabrielOliveira
                     }
                 }
             }
+        }
+
+        private void ComboGênero_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
