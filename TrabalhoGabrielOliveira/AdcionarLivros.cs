@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,14 +29,12 @@ namespace TrabalhoGabrielOliveira
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                using (var stream = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                using (var tempImage = Image.FromFile(openFileDialog1.FileName))
                 {
-                    PictureCapa.Image = Image.FromStream(stream);
+                    PictureCapa.Image = new Bitmap(tempImage);
                 }
             }
         }
-
-
         private void AdcionarLivros_Load(object sender, EventArgs e)
         {
 
@@ -85,7 +84,7 @@ namespace TrabalhoGabrielOliveira
 
         private void TextAcabamento_Click(object sender, EventArgs e)
         {
-            TextAcabamento.Clear();
+           
         }
 
         private void TextPreço_Click(object sender, EventArgs e)
@@ -101,10 +100,19 @@ namespace TrabalhoGabrielOliveira
             string preco = TextPreco.Text;
             string genero = ComboGênero.Text;
             string paginas = TextPaginas.Text;
-            string acabamento = TextAcabamento.Text;
+            string acabamento = ComboAcabamento.Text;
 
+            byte[] imagemBytes = null;
+            if (PictureCapa.Image != null)
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    PictureCapa.Image.Save(ms, ImageFormat.Png);
+                    imagemBytes = ms.ToArray();
+                }
+            }
             string conexao = "Server=sqlexpress;Database=CJ3027422PR2;User Id=aluno;Password=aluno";
-            string sql = "INSERT INTO Livros2 (Nome, Autor, Sinopse, Preco, Genero, Paginas, Acabamento) VALUES (@Nome ,@Autor ,@Sinopse ,@Preco ,@Genero, @Paginas, @Acabamento)";
+            string sql = "INSERT INTO Livros2 (Nome, Autor, Sinopse, Preco, Genero, Paginas, Acabamento, Capa) VALUES (@Nome ,@Autor ,@Sinopse ,@Preco ,@Genero, @Paginas, @Acabamento, @Capa)";
             using (SqlConnection conn = new SqlConnection(conexao))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -116,6 +124,7 @@ namespace TrabalhoGabrielOliveira
                     cmd.Parameters.AddWithValue("@Genero", genero);
                     cmd.Parameters.AddWithValue("@Paginas", paginas);
                     cmd.Parameters.AddWithValue("@Acabamento", acabamento);
+                    cmd.Parameters.AddWithValue("@Capa", (object)imagemBytes ?? DBNull.Value);
 
                     try
                     {
@@ -134,6 +143,11 @@ namespace TrabalhoGabrielOliveira
         private void ComboGênero_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void ComboGênero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

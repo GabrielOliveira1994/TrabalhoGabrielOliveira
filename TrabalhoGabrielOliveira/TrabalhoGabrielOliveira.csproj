@@ -64,6 +64,12 @@
     <Compile Include="Configurar.Designer.cs">
       <DependentUpon>Configurar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfigurarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurarConta.Designer.cs">
+      <DependentUpon>ConfigurarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContaEmpresarialConfigurada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +88,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configurar.resx">
       <DependentUpon>Configurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurarConta.resx">
+      <DependentUpon>ConfigurarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContaEmpresarialConfigurada.resx">
       <DependentUpon>ContaEmpresarialConfigurada.cs</DependentUpon>
@@ -125,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

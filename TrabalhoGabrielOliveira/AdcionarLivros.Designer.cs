@@ -32,13 +32,13 @@
             this.BtnAutor = new System.Windows.Forms.Button();
             this.TextSinopse = new System.Windows.Forms.TextBox();
             this.TextPaginas = new System.Windows.Forms.TextBox();
-            this.TextAcabamento = new System.Windows.Forms.TextBox();
             this.TextPreco = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.PictureCapa = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.TextAutor = new System.Windows.Forms.TextBox();
             this.ComboGênero = new System.Windows.Forms.ComboBox();
+            this.ComboAcabamento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureCapa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,15 +80,6 @@
             this.TextPaginas.TabIndex = 4;
             this.TextPaginas.Text = "Páginas";
             this.TextPaginas.Click += new System.EventHandler(this.TextPáginasClick);
-            // 
-            // TextAcabamento
-            // 
-            this.TextAcabamento.Location = new System.Drawing.Point(353, 273);
-            this.TextAcabamento.Name = "TextAcabamento";
-            this.TextAcabamento.Size = new System.Drawing.Size(100, 20);
-            this.TextAcabamento.TabIndex = 5;
-            this.TextAcabamento.Text = "Acabamento";
-            this.TextAcabamento.Click += new System.EventHandler(this.TextAcabamento_Click);
             // 
             // TextPreco
             // 
@@ -152,19 +143,32 @@
             this.ComboGênero.Size = new System.Drawing.Size(121, 21);
             this.ComboGênero.TabIndex = 10;
             this.ComboGênero.Text = "Gênero";
+            this.ComboGênero.SelectedIndexChanged += new System.EventHandler(this.ComboGênero_SelectedIndexChanged);
             this.ComboGênero.Click += new System.EventHandler(this.ComboGênero_Click);
+            // 
+            // ComboAcabamento
+            // 
+            this.ComboAcabamento.FormattingEnabled = true;
+            this.ComboAcabamento.Items.AddRange(new object[] {
+            "Capa Dura",
+            "Capa Mole"});
+            this.ComboAcabamento.Location = new System.Drawing.Point(353, 270);
+            this.ComboAcabamento.Name = "ComboAcabamento";
+            this.ComboAcabamento.Size = new System.Drawing.Size(121, 21);
+            this.ComboAcabamento.TabIndex = 11;
+            this.ComboAcabamento.Text = "Acabamento";
             // 
             // AdcionarLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ComboAcabamento);
             this.Controls.Add(this.ComboGênero);
             this.Controls.Add(this.TextAutor);
             this.Controls.Add(this.PictureCapa);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TextPreco);
-            this.Controls.Add(this.TextAcabamento);
             this.Controls.Add(this.TextPaginas);
             this.Controls.Add(this.TextSinopse);
             this.Controls.Add(this.BtnAutor);
@@ -184,12 +188,12 @@
         private System.Windows.Forms.Button BtnAutor;
         private System.Windows.Forms.TextBox TextSinopse;
         private System.Windows.Forms.TextBox TextPaginas;
-        private System.Windows.Forms.TextBox TextAcabamento;
         private System.Windows.Forms.TextBox TextPreco;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.PictureBox PictureCapa;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox TextAutor;
         private System.Windows.Forms.ComboBox ComboGênero;
+        private System.Windows.Forms.ComboBox ComboAcabamento;
     }
 }
