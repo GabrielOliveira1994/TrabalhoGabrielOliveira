@@ -12,18 +12,29 @@ namespace TrabalhoGabrielOliveira
 {
     public partial class ConfigurarConta : Form
     {
-        public string NomeUsuario { get; set; }
-        public string EmailUsuario { get; set; }
+        private string nome;
+        private string email;
 
-        public ConfigurarConta()
+        public ConfigurarConta(string Nome, string Email)
         {
             InitializeComponent();
+            this.nome = Nome;
+            this.email = Email;
         }
 
         private void ConfigurarConta_Load(object sender, EventArgs e)
         {
-            TextName2.Text = NomeUsuario;
-            TextEmail2.Text = EmailUsuario;
+        }
+
+        private void ConfigurarConta_Load_1(object sender, EventArgs e)
+        {
+            TextName2.Text = nome;
+            TextEmail2.Text = email;
+        }
+
+        private void PictureIcon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

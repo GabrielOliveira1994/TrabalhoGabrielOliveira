@@ -66,7 +66,7 @@ namespace TrabalhoGabrielOliveira
 
 
             string conexao = "Server=sqlexpress;Database=CJ3027422PR2;User Id=aluno;Password=aluno";
-            string sql = "INSERT INTO  (Nome, Email, Senha) VALUES (@Nome, @Email, @Senha)";
+            string sql = "INSERT INTO clientes (Nome, Email, Senha) VALUES (@Nome, @Email, @Senha)";
             using (SqlConnection conn = new SqlConnection(conexao))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -84,13 +84,14 @@ namespace TrabalhoGabrielOliveira
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro ao salvar: " + ex.Message);
+                        return;
                     }
                 }
-                ConfigurarConta product = new ConfigurarConta();
-                this.Visible = false;
-                product.ShowDialog();
-                this.Visible = true;
             }
+            ConfigurarConta product = new ConfigurarConta(Nome, Email);
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
         }
     }
 }
