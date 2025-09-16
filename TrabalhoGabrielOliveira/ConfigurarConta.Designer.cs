@@ -31,12 +31,13 @@
             this.PictureIcon = new System.Windows.Forms.PictureBox();
             this.TextName2 = new System.Windows.Forms.TextBox();
             this.TextEmail2 = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.SalvarConfiguração = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             this.TextName2.Name = "TextName2";
             this.TextName2.Size = new System.Drawing.Size(218, 20);
             this.TextName2.TabIndex = 1;
+            this.TextName2.TextChanged += new System.EventHandler(this.TextName2_TextChanged);
             // 
             // TextEmail2
             // 
@@ -65,9 +67,9 @@
             this.TextEmail2.Size = new System.Drawing.Size(218, 20);
             this.TextEmail2.TabIndex = 2;
             // 
-            // openFileDialog1
+            // openFileDialog3
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog3.FileName = "openFileDialog1";
             // 
             // textBox1
             // 
@@ -111,11 +113,22 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Termine seu Cadastro";
             // 
+            // SalvarConfiguração
+            // 
+            this.SalvarConfiguração.Location = new System.Drawing.Point(616, 376);
+            this.SalvarConfiguração.Name = "SalvarConfiguração";
+            this.SalvarConfiguração.Size = new System.Drawing.Size(75, 23);
+            this.SalvarConfiguração.TabIndex = 8;
+            this.SalvarConfiguração.Text = "Salvar";
+            this.SalvarConfiguração.UseVisualStyleBackColor = true;
+            this.SalvarConfiguração.Click += new System.EventHandler(this.SalvarConfiguração_Click);
+            // 
             // ConfigurarConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SalvarConfiguração);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -139,11 +152,12 @@
         private System.Windows.Forms.PictureBox PictureIcon;
         private System.Windows.Forms.TextBox TextName2;
         private System.Windows.Forms.TextBox TextEmail2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SalvarConfiguração;
     }
 }

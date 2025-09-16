@@ -45,6 +45,7 @@
             this.TextName.TabIndex = 0;
             this.TextName.Text = "Digite seu Nome";
             this.TextName.Click += new System.EventHandler(this.TextName1_Click);
+            this.TextName.TextChanged += new System.EventHandler(this.TextName_TextChanged);
             // 
             // TextEmail
             // 

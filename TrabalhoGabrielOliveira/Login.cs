@@ -93,5 +93,10 @@ namespace TrabalhoGabrielOliveira
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void TextName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

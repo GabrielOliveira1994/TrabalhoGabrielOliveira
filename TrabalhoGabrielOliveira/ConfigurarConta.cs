@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +36,23 @@ namespace TrabalhoGabrielOliveira
         }
 
         private void PictureIcon_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog3.ShowDialog() == DialogResult.OK)
+            {
+                using (var tempImage = Image.FromFile(openFileDialog3.FileName))
+                {
+                    PictureIcon.Image = new Bitmap(tempImage);
+                }
+            }
+        }
+
+        private void SalvarConfiguração_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void TextName2_TextChanged(object sender, EventArgs e)
         {
 
         }
