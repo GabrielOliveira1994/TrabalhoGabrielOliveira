@@ -58,17 +58,17 @@
     <Compile Include="CadastrarAutor.Designer.cs">
       <DependentUpon>CadastrarAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configurar.cs">
+    <Compile Include="CadastroEmpresarial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Configurar.Designer.cs">
-      <DependentUpon>Configurar.cs</DependentUpon>
+    <Compile Include="CadastroEmpresarial.Designer.cs">
+      <DependentUpon>CadastroEmpresarial.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigurarConta.cs">
+    <Compile Include="ConfigurarConta2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigurarConta.Designer.cs">
-      <DependentUpon>ConfigurarConta.cs</DependentUpon>
+    <Compile Include="ConfigurarConta2.Designer.cs">
+      <DependentUpon>ConfigurarConta2.cs</DependentUpon>
     </Compile>
     <Compile Include="ContaEmpresarialConfigurada.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,11 @@
     <Compile Include="ContaEmpresarialConfigurada.Designer.cs">
       <DependentUpon>ContaEmpresarialConfigurada.cs</DependentUpon>
     </Compile>
-    <Compile Include="EouAI.cs">
+    <Compile Include="LoginEmpresarial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EouAI.Designer.cs">
-      <DependentUpon>EouAI.cs</DependentUpon>
+    <Compile Include="LoginEmpresarial.Designer.cs">
+      <DependentUpon>LoginEmpresarial.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,37 +88,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Login2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Login2.Designer.cs">
+      <DependentUpon>Login2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaConfigurada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConfigurada.Designer.cs">
+      <DependentUpon>TelaConfigurada.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdcionarLivros.resx">
       <DependentUpon>AdcionarLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarAutor.resx">
       <DependentUpon>CadastrarAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configurar.resx">
-      <DependentUpon>Configurar.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroEmpresarial.resx">
+      <DependentUpon>CadastroEmpresarial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigurarConta.resx">
-      <DependentUpon>ConfigurarConta.cs</DependentUpon>
+    <EmbeddedResource Include="ConfigurarConta2.resx">
+      <DependentUpon>ConfigurarConta2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContaEmpresarialConfigurada.resx">
       <DependentUpon>ContaEmpresarialConfigurada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EouAI.resx">
-      <DependentUpon>EouAI.cs</DependentUpon>
+    <EmbeddedResource Include="LoginEmpresarial.resx">
+      <DependentUpon>LoginEmpresarial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Login2.resx">
+      <DependentUpon>Login2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TelaConfigurada.resx">
+      <DependentUpon>TelaConfigurada.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

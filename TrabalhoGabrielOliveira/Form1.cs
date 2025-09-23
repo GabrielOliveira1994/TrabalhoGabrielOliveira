@@ -29,7 +29,7 @@ namespace TrabalhoGabrielOliveira
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login product = new Login();
+            Login2 product = new Login2();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;

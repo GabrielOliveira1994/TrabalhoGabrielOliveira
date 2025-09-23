@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace TrabalhoGabrielOliveira
 {
-    public partial class EouAI : Form
+    public partial class CadastroEmpresarial : Form
     {
-        public EouAI()
+        public CadastroEmpresarial()
         {
             InitializeComponent();
         }
 
-        private void BtnEditora_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            Configurar product = new Configurar();
+            ContaEmpresarialConfigurada product = new ContaEmpresarialConfigurada();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
