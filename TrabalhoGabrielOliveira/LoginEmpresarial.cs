@@ -41,5 +41,15 @@ namespace TrabalhoGabrielOliveira
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void TextName_Click(object sender, EventArgs e)
+        {
+			TextName.Clear();
+		}
+
+        private void TextSenha_Click(object sender, EventArgs e)
+        {
+			TextSenha.Clear();
+		}
     }
 }

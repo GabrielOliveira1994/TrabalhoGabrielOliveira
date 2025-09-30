@@ -24,7 +24,7 @@ namespace TrabalhoGabrielOliveira
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
-        }
+		}
 
         private void BtnLogin2_Click(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace TrabalhoGabrielOliveira
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
-        }
+		}
 
         private void BtnCE_Click(object sender, EventArgs e)
         {
@@ -41,5 +41,20 @@ namespace TrabalhoGabrielOliveira
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void TextName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextName_Click(object sender, EventArgs e)
+        {
+			TextName.Clear();
+		}
+
+        private void TextSenha_Click(object sender, EventArgs e)
+        {
+			TextSenha.Clear();
+		}
     }
 }

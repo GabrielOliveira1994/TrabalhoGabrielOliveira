@@ -33,7 +33,7 @@ namespace TrabalhoGabrielOliveira
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
-        }
+		}
 
         private void label1_Click(object sender, EventArgs e)
         {

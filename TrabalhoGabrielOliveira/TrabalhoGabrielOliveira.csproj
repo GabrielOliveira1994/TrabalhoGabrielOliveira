@@ -82,11 +82,11 @@
     <Compile Include="LoginEmpresarial.Designer.cs">
       <DependentUpon>LoginEmpresarial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Tela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Tela.Designer.cs">
+      <DependentUpon>Tela.cs</DependentUpon>
     </Compile>
     <Compile Include="Login2.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="LoginEmpresarial.resx">
       <DependentUpon>LoginEmpresarial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Tela.resx">
+      <DependentUpon>Tela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login2.resx">
       <DependentUpon>Login2.cs</DependentUpon>
